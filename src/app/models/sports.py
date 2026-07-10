@@ -1,7 +1,10 @@
-from typing import List, Optional
+from typing import List, Optional, TYPE_CHECKING
 from sqlalchemy import ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from src.app.core.database import Base
+
+if TYPE_CHECKING:
+    from .event import Event
 
 class Nation(Base):
     __tablename__ = "nations"

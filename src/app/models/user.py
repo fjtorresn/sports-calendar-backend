@@ -1,9 +1,11 @@
 from datetime import datetime, timezone
-from typing import List
+from typing import List, TYPE_CHECKING
 from sqlalchemy import DateTime, ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from src.app.core.database import Base
 
+if TYPE_CHECKING:
+    from .event import Event
 class User(Base):
     __tablename__ = "users"
 
