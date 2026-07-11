@@ -41,8 +41,8 @@ def seed_events():
         db.refresh(evento_futbol)
 
         participantes_futbol = [
-            EventParticipant(evento_id=evento_futbol.id, participant_type="team", participant_id=1, is_home=True),
-            EventParticipant(evento_id=evento_futbol.id, participant_type="team", participant_id=2, is_home=False)
+            EventParticipant(event_id=evento_futbol.id, participant_type="team", participant_id=1, is_home=True),
+            EventParticipant(event_id=evento_futbol.id, participant_type="team", participant_id=2, is_home=False)
         ]
         db.add_all(participantes_futbol)
 
@@ -64,8 +64,8 @@ def seed_events():
         db.refresh(evento_tenis)
 
         participantes_tenis = [
-            EventParticipant(evento_id=evento_tenis.id, participant_type="player", participant_id=3, is_home=True),
-            EventParticipant(evento_id=evento_tenis.id, participant_type="player", participant_id=4, is_home=False)
+            EventParticipant(event_id=evento_tenis.id, participant_type="player", participant_id=3, is_home=True),
+            EventParticipant(event_id=evento_tenis.id, participant_type="player", participant_id=4, is_home=False)
         ]
         db.add_all(participantes_tenis)
 

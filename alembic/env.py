@@ -7,7 +7,7 @@ from alembic import context
 
 from src.app.core.database import Base
 from src.app.models.sports import Nation, Sport, Competition, Team, Player
-from src.app.models.user import User, UserPreference
+from src.app.models.user import User, UserSubscription
 from src.app.models.event import Event, EventParticipant
 
 # this is the Alembic Config object, which provides
